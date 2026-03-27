@@ -1,8 +1,5 @@
 .themes-list {
-  width: 180px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
+  width: 200px;
   flex-shrink: 0;
 }
 
@@ -14,23 +11,37 @@
   letter-spacing: 1px;
 }
 
-.themes-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.theme-card {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.8rem;
+  transition: box-shadow 0.2s;
 }
 
-.themes-list li {
-  margin-bottom: 0.6rem;
+.theme-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.themes-list a {
-  text-decoration: none;
-  color: #444;
-  font-size: 0.9rem;
-  transition: color 0.2s;
+.theme-name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  display: block;
+  margin-bottom: 0.4rem;
 }
 
-.themes-list a:hover {
-  color: #e94560;
+.theme-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.78rem;
+  color: #666;
+}
+
+.theme-date {
+  display: block;
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 0.4rem;
 }

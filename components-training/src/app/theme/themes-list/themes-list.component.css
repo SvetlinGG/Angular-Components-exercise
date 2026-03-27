@@ -1,0 +1,36 @@
+.themes-list {
+  width: 180px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  flex-shrink: 0;
+}
+
+.themes-list h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #1a1a2e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.themes-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.themes-list li {
+  margin-bottom: 0.6rem;
+}
+
+.themes-list a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.themes-list a:hover {
+  color: #e94560;
+}

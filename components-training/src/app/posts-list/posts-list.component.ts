@@ -13,14 +13,14 @@ import { ApiService } from '../api.service';
 })
 export class PostsListComponent implements OnInit {
   posts: Post[] = [];
-  //isLoading = true;
+  
 
   constructor(private apiService: ApiService){}
 
   ngOnInit(): void {
     this.apiService.getPosts(3).subscribe((posts) => {
       this.posts = posts;
-      //this.isLoading = false;
+      
     })
   }
 }

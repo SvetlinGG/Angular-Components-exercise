@@ -17,6 +17,7 @@ export class ApiService {
   }
 
   getThemes(){
+    
     return this.http.get<Theme[]>(`/api/themes`)
   }
   

@@ -1,9 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { Post } from './types/Post';
 
 @Injectable({providedIn: 'root'})
 export class ApiService {
 
-  constructor() { }
-  private http = inject(HttpClient)
+  constructor( private http: HttpClient) { }
+
+  getPosts(limit?: number){
+    let url = `/api/posts`;
+    if (limit){
+      url += `?limit=${limit}`
+    }
+    return this.http.get<Post[]>(url)
+  }
+  
 }

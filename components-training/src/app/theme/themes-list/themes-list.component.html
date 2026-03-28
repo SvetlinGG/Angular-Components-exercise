@@ -1,58 +1,17 @@
 <aside class="themes-list">
   <h3>Themes</h3>
 
-  <div class="theme-card">
-    <span class="theme-name">JavaScript</span>
-    <div class="theme-meta">
-      <span>📝 18 posts</span>
-      <span>👥 142 subscribers</span>
+  @for (theme of themes; track $index) {
+    <div class="theme-card">
+      <span class="theme-name">{{theme.themeName}}</span>
+      <div class="theme-meta">
+        <span>{{theme.created_at}}</span>
+        <span>{{theme.subscribers}}</span>
+      </div>
+      <span class="theme-date">{{theme.updatedAt}}</span>
     </div>
-    <span class="theme-date">Jan 5, 2025</span>
-  </div>
+  }
 
-  <div class="theme-card">
-    <span class="theme-name">Angular</span>
-    <div class="theme-meta">
-      <span>📝 24 posts</span>
-      <span>👥 98 subscribers</span>
-    </div>
-    <span class="theme-date">Jan 14, 2025</span>
-  </div>
-
-  <div class="theme-card">
-    <span class="theme-name">TypeScript</span>
-    <div class="theme-meta">
-      <span>📝 11 posts</span>
-      <span>👥 76 subscribers</span>
-    </div>
-    <span class="theme-date">Feb 2, 2025</span>
-  </div>
-
-  <div class="theme-card">
-    <span class="theme-name">CSS</span>
-    <div class="theme-meta">
-      <span>📝 9 posts</span>
-      <span>👥 54 subscribers</span>
-    </div>
-    <span class="theme-date">Feb 20, 2025</span>
-  </div>
-
-  <div class="theme-card">
-    <span class="theme-name">Node.js</span>
-    <div class="theme-meta">
-      <span>📝 15 posts</span>
-      <span>👥 87 subscribers</span>
-    </div>
-    <span class="theme-date">Mar 8, 2025</span>
-  </div>
-
-  <div class="theme-card">
-    <span class="theme-name">Git</span>
-    <div class="theme-meta">
-      <span>📝 7 posts</span>
-      <span>👥 63 subscribers</span>
-    </div>
-    <span class="theme-date">Mar 30, 2025</span>
-  </div>
+  
 
 </aside>

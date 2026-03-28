@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Post } from './types/Post';
+import { Theme } from './types/theme';
 
 @Injectable({providedIn: 'root'})
 export class ApiService {
@@ -13,6 +14,10 @@ export class ApiService {
       url += `?limit=${limit}`
     }
     return this.http.get<Post[]>(url)
+  }
+
+  getThemes(){
+    return this.http.get<Theme[]>(`/api/themes`)
   }
   
 }

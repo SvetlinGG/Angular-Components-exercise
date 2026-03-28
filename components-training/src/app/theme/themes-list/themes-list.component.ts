@@ -12,14 +12,14 @@ import { ApiService } from '../../api.service';
 export class ThemesListComponent implements OnInit {
 
   themes: Theme[] = [];
-  //isLoading = true;
+  isLoading = true;
 
   constructor( private apiService: ApiService){}
 
   ngOnInit(): void {
-    this.apiService.getThemes().subscribe((theme) => {
+    this.apiService.getThemes().subscribe((themes) => {
       this.themes = this.themes;
-      //this.isLoading = false;
+      this.isLoading = false;
     })
   }
 

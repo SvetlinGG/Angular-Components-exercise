@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ThemesListComponent } from '../theme/themes-list/themes-list.component';
 import { PostsListComponent } from '../posts-list/posts-list.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [ThemesListComponent, PostsListComponent],
+  imports: [ThemesListComponent, PostsListComponent,RouterLink],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

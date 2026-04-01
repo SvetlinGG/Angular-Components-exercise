@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Theme } from '../../types/theme';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-current-theme',
   standalone: true,
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './current-theme.component.html',
   styleUrl: './current-theme.component.css'
 })
-export class CurrentThemeComponent {
+export class CurrentThemeComponent implements OnInit {
+
+  theme = {} as Theme;
+
+  constructor(private route: ActivatedRoute, private apiService: ApiService ){}
+
+
+  ngOnInit(): void {
+    
+    const id = this.route.snapshot.params['themeId'];
+    this.apiService.getSingleTheme(id).subscribe(theme => {
+      this.theme = theme
+    });
+  }
 
 }

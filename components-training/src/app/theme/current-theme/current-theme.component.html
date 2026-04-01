@@ -4,7 +4,7 @@
     <h2 class="theme-title">{{theme.themeName}}</h2>
     <div class="theme-meta">
       <span>📅 {{theme.created_at}}</span>
-      <span>👥 {{theme.subscribers}}</span>
+      <span>👥 {{theme.subscribers.length}}</span>
       <span>📝 {{theme.posts}}</span>
     </div>
     <button class="btn-subscribe">Subscribe</button>
@@ -13,14 +13,14 @@
   <div class="posts-section">
     <h3>Posts in this Theme</h3>
 
-    <div class="post-card">
+    <!-- <div class="post-card">
       <div class="post-header">
         <span class="post-author"></span>
         <span class="post-date">Jan 15, 2025</span>
       </div>
       <p class="post-text">Understanding closures in JavaScript is key to writing clean and efficient code.</p>
       <span class="post-likes">❤️ 24</span>
-    </div>
+    </div> -->
 
     @for (post of theme.posts; track $index) {
       <div class="post-card">

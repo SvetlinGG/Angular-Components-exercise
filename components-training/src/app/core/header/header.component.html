@@ -2,9 +2,19 @@
   <div class="logo">Component training</div>
   <nav class="nav">
     <a routerLink="/home">Home</a>
-    <a routerLink="/profile">User Profile</a>
-    <a routerLink="/login">Login</a>
+    <a routerLink="/themes">Themes</a>
+    <a routerLink="/add-theme">New Theme</a>
+    @if (isLogged) {
+      <a routerLink="/profile">{{firstName}} Profile</a>
+      <a (click)="logout()">Logout</a>
+    }@else {
+      <a routerLink="/login">Login</a>
     <a routerLink="/register">Register</a>
-    <a routerLink="/home">Logout</a>
+    }
+    
+
+    
+    
+    
   </nav>
 </header>

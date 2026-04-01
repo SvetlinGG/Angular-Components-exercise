@@ -4,14 +4,14 @@
 
     <div class="form-group">
       <label for="themeName">Theme Name</label>
-      <input id="themeName" type="text" placeholder="Enter theme name" />
+      <input id="themeName" type="text" placeholder="Enter theme name" #inputThemeName/>
     </div>
 
     <div class="form-group">
       <label for="description">Description</label>
-      <textarea id="description" rows="4" placeholder="Enter theme description"></textarea>
+      <input id="description" rows="4" placeholder="Enter theme description" #inputPostText/>
     </div>
 
-    <button type="submit" class="btn-add">Create Theme</button>
+    <button (click)="addTheme($event, inputThemeName.value, inputPostText.value)" type="submit" class="btn-add">Create Theme</button>
   </form>
 </div>

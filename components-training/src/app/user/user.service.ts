@@ -8,6 +8,10 @@ export class UserService {
 
   USER_KEY = '[user]';
   user: UserForAuth | null = null;
+
+  get isLogged(): boolean{
+    return !!this.user;
+  }
   
   constructor() {
     try {
@@ -26,6 +30,11 @@ export class UserService {
       id: '123123'
     }
     localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
+  }
+
+  logout(){
+    this.user = null;
+    localStorage.removeItem(this.USER_KEY)
   }
 
   

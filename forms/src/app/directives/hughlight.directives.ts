@@ -45,7 +45,10 @@ export class HighlightDirective implements OnInit, OnDestroy{
         console.log('On Destroy invoked');
         console.log(this.unsubEventArray);
         
-        
+        this.unsubEventArray.forEach((eventFn) => {
+            console.log(eventFn);
+            
+        })
     }
 
 }

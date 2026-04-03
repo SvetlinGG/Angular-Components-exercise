@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit, Renderer2 } from "@angular/core";
+import { Directive, ElementRef, OnDestroy, OnInit, Renderer2 } from "@angular/core";
 
 type MyVoid = () => void;
 
@@ -7,7 +7,7 @@ type MyVoid = () => void;
     standalone: true,
 })
 
-export class HighlightDirective implements OnInit{
+export class HighlightDirective implements OnInit, OnDestroy{
 
     unsubEventArray: MyVoid[] = [];
 
@@ -30,7 +30,10 @@ export class HighlightDirective implements OnInit{
 
         this.unsubEventArray.push(mouseEnterEvent);
         this.unsubEventArray.push(mouseLeaveEvent)
-
+    }
+    ngOnDestroy(): void {
+        console.log('On Destroy Invoked');
+        
     }
 
     mouseEnterHandler(e: MouseEvent){

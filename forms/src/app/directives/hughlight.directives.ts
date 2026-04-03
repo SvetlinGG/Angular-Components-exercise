@@ -31,10 +31,7 @@ export class HighlightDirective implements OnInit, OnDestroy{
         this.unsubEventArray.push(mouseEnterEvent);
         this.unsubEventArray.push(mouseLeaveEvent)
     }
-    ngOnDestroy(): void {
-        console.log('On Destroy Invoked');
-        
-    }
+    
 
     mouseEnterHandler(e: MouseEvent){
         this.renderer.addClass(this.elRef.nativeElement, 'highlight');
@@ -42,6 +39,13 @@ export class HighlightDirective implements OnInit, OnDestroy{
 
     mouseLeaveHandler(e: MouseEvent){
         this.renderer.removeClass(this.elRef.nativeElement, 'highlight')
+    }
+
+    ngOnDestroy(): void {
+        console.log('On Destroy invoked');
+        console.log(this.unsubEventArray);
+        
+        
     }
 
 }

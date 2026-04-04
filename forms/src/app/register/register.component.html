@@ -22,6 +22,18 @@
             />
         </p>
 
+        @if(registerForm.get('email')?.touched){
+          <div>
+            @if(registerForm.get('email')?.errors?.['required']){
+            <div style="color: red">Email is required!</div>
+            }
+            <!--  -->
+            @if(registerForm.get('email')?.errors?.['email']){
+            <div style="color: red">Email is not VALID!</div>
+            }
+          </div>
+          }
+
         <p class="field field-icon">
           <label for="password"><span><i class="fas fa-lock"></i></span></label>
           <input 

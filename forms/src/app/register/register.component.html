@@ -32,7 +32,7 @@
             <div style="color: red">Email is not VALID!</div>
             }
           </div>
-          }
+        }
 
         <p class="field field-icon">
           <label for="password"><span><i class="fas fa-lock"></i></span></label>
@@ -48,6 +48,10 @@
         <p>
           <button>Create Account</button>
         </p>
+
+        @if(registerForm.get('password')?.errors?.['maxlength']){
+          <div style="color: red">Password is more than 5 chars!</div>
+        }
         
         <p class="text-center">
           Have an account?

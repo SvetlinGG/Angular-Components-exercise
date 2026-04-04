@@ -1,23 +1,19 @@
-import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
-import { UserService } from '../user.service';
+import { Component, ViewChild } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
 
-  constructor( private userService: UserService, private router: Router){}
+  @ViewChild('loginForm') form: NgForm | undefined;
 
-  login(event: Event, emailValue: string, passwordValue: string){
-    event.preventDefault();
-    this.userService.login();
-    this.router.navigate(['/home'])
-    
+  formSubmitHandler() {
+    console.log('Form has been submitted!!!');
   }
-
 }

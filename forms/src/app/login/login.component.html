@@ -1,5 +1,5 @@
 <div class="container">
-    <form (ngSubmit)="formSubmitHandler()" action="">
+    <form #loginForm="NgForm" (ngSubmit)="formSubmitHandler()" action="">
         <h3>Login Form</h3>
             <div class="form-group">
             <label for="email">Email</label>

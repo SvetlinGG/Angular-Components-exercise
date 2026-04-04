@@ -1,5 +1,7 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { FormsModule, NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -9,8 +11,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
+  @ViewChild('loginForm')from: NgForm | undefined;
   formSubmitHandler(){
-    console.log('Form has been submited!!!');
+    console.log('Form has been submitted!!!');
     
   }
 }

@@ -1,16 +1,21 @@
-<div class="container">
-    <form #loginForm="NgForm" (ngSubmit)="formSubmitHandler()" action="">
-        <h3>Login Form</h3>
-            <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email"
-            required>
-            </div>
-            <div class="form-group">
-            <label for="password">Password</label>
-            <input type="text" class="form-control" id="password">
-            </div>
-            <button class="btn">Login</button>
+<div class="login-wrapper">
+    <form class="login-form" #loginForm="ngForm" (ngSubmit)="formSubmitHandler()">
+      <h2>Welcome Back</h2>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" ngModel />
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" placeholder="Enter your password" ngModel />
+      </div>
+  
+      <button type="submit" class="btn-login">Login</button>
+  
+      <p class="register-link">Don't have an account? <a href="/register">Register</a></p>
     </form>
-</div>
+  </div>
+  
 

@@ -1,18 +1,18 @@
 <div class="login-wrapper">
-  <form class="login-form">
+  <form class="login-form" #loginForm="ngForm" (ngSubmit)="formSubmitHandler()">
     <h2>Welcome Back</h2>
 
     <div class="form-group">
       <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Enter your email" #inputEmail/>
+      <input id="email" type="email" name="email" placeholder="Enter your email" ngModel />
     </div>
 
     <div class="form-group">
       <label for="password">Password</label>
-      <input id="password" type="password" placeholder="Enter your password" #inputPassword/>
+      <input id="password" type="password" name="password" placeholder="Enter your password" ngModel />
     </div>
 
-    <button (click)="login($event, inputEmail.value, inputPassword.value)" type="submit" class="btn-login">Login</button>
+    <button type="submit" class="btn-login">Login</button>
 
     <p class="register-link">Don't have an account? <a href="/register">Register</a></p>
   </form>

@@ -15,10 +15,17 @@
       </div>
 
       
-      @if ( emailInput.touched && emailInput.errors?.['required']) {
-          <div>Email is required!</div>
-        }
-      
+      @if(emailInput.touched){
+        <div>
+          @if(emailInput.errors?.['required']){
+          <div style="color: red">Email is required!</div>
+          }
+          <!--  -->
+          @if(emailInput.errors?.['email']){
+          <div style="color: red">Email is not VALID!</div>
+          }
+        </div>
+      }
   
       <div class="form-group">
         <label for="password">Password</label>

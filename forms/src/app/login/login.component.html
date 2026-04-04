@@ -13,6 +13,12 @@
             required
             #emailInput="ngModel" />
       </div>
+
+      
+      @if ( emailInput.touched && emailInput.errors?.['required']) {
+          <div>Email is required!</div>
+        }
+      
   
       <div class="form-group">
         <label for="password">Password</label>

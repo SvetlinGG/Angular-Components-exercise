@@ -13,8 +13,16 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class LoginComponent {
 
   @ViewChild('loginForm')from: NgForm | undefined;
+
   formSubmitHandler(){
-    console.log('Form has been submitted!!!');
+    const form = this.form;
     
+
+    if (form?.invalid) {
+      console.log('This form is invalid!');
+      return;
+    }
+
+    form.reset();
   }
 }

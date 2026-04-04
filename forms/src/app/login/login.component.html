@@ -4,12 +4,26 @@
   
       <div class="form-group">
         <label for="email">Email</label>
-        <input class="form-control"  id="email" type="email" name="email" ngModel />
+        <input 
+            class="form-control"  
+            id="email" 
+            type="email" 
+            name="email" 
+            ngModel 
+            required
+            #emailInput="ngModel" />
       </div>
   
       <div class="form-group">
         <label for="password">Password</label>
-        <input class="form-control" id="password" type="password" name="password" ngModel />
+        <input 
+            class="form-control" 
+            id="password" 
+            type="password" 
+            name="password" 
+            required
+            ngModel 
+            #passwordInput="ngModel" />
       </div>
   
       <button type="submit" class="btn">Login</button>

@@ -12,6 +12,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  width = Math.floor(Math.random()*100);
+
+  randomPercentage = Math.floor(Math.random()*100);
+  widthInPercentage = `${this.randomPercentage}%`;
+  isPercentageAbove = this.randomPercentage >= 50;
 
 }

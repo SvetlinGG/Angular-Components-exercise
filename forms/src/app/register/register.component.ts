@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,8 +9,15 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 })
 export class RegisterComponent {
 
+  registerForm = new FormGroup ({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  })
+
   constructor(private fb: FormBuilder){}
 
-  
+  handleSubmit(){
+    
+  }
 
 }

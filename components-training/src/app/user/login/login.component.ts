@@ -1,11 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { FormsModule, NgForm } from '@angular/forms';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, FormsModule],
+  imports: [RouterLink, FormsModule, NgClass],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -15,6 +16,7 @@ export class LoginComponent {
 
   formSubmitHandler() {
     const form = this.form;
+    
 
     if (form?.invalid) {
       console.log('This form is invalid!');
@@ -23,4 +25,7 @@ export class LoginComponent {
 
     form?.reset();
   }
+
+  
+  
 }

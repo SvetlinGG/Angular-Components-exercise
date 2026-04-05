@@ -2,7 +2,7 @@
   <form class="login-form" #loginForm="ngForm" (ngSubmit)="formSubmitHandler()">
     <h2>Welcome Back</h2>
 
-    <div class="form-group">
+    <div [ngClass]="isSpecial ? 'special' : ''" class="form-group">
       <label for="email">Email</label>
       <input id="email" type="email" name="email" placeholder="Enter your email" ngModel />
     </div>

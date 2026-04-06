@@ -9,7 +9,7 @@ import { UserService } from '../user.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, FormsModule, NgClass, EmailDirective],
+  imports: [RouterLink, FormsModule, EmailDirective],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

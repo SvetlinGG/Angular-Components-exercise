@@ -1,9 +1,7 @@
 <header class="header">
   <div class="logo">Svetlin's project</div>
   <nav class="nav">
-    <a routerLink="/home">Home</a>
-    <a routerLink="/themes">Themes</a>
-    <a routerLink="/add-theme">New Theme</a>
+    
     @if (isLogged) {
       <a routerLink="/profile">{{firstName}} Profile</a>
       <a (click)="logout()">Logout</a>
@@ -11,6 +9,10 @@
       <a routerLink="/login">Login</a>
     <a routerLink="/register">Register</a>
     }
+
+    <a routerLink="/home">Home</a>
+    <a routerLink="/themes">Themes</a>
+    <a routerLink="/add-theme">New Theme</a>
     
 
     
